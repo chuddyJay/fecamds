@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+  <meta charset="utf-8">
+  <!-- Required meta tags -->
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+
+  <title>fecamds esucom</title>
+
+  <script type="text/javascript"></script>
+
+  <script src="jquery.min.js"></script>
+  <style media="screen" type="text/css">
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .top-bar-container {
+      width: 100%;
+      height: 31.5vh;
+      /*  background-color:rgba(204, 163, 0, 1)*/
+      background-color: rgb(121, 82, 179);
+    }
+
+    .word-container {
+      padding-top: 25px;
+      width: 30%;
+      float: left;
+    }
+
+    .word-container .one {
+      font-size: 4rem;
+      font-weight: bold;
+    }
+
+    .word-container .two {
+      font-family: cursive;
+    }
+
+    .menu-bar-container {
+      width: 100%;
+      height: 50px;
+      /*  background-color: rgb(102,82,0);*/
+      background-color: rgb(247, 245, 251);
+      box-shadow: 0px 10px 15px grey;
+    }
+
+    .menu {
+      display: flex;
+      width: 50%;
+      margin: 0 auto;
+      height: 50px;
+      justify-content: center;
+      align-items: center;
+      /*background-color: rgb(102,82,0)*/
+      background-color: rgb(247, 245, 251)
+    }
+
+    @media (max-width:500px) {
+      .menu{
+        width:80%
+      }
+    }
+    .menu-btns {
+      font-family: arial, sans-serif;
+      padding-right: 10px;
+
+    }
+
+    a{
+      color:black;
+      text-decoration:none;
+    }
+
+    .logo-container {
+      width: 250px;
+      height: 200px;
+      float: right;
+    }
+
+    .logo {
+      width: 200px;
+      height: 200px;
+    }
+
+    .body-container {
+      display: flex;
+      justify-content: center;
+      background-color: rgba(203, 240, 193, 0.5);
+    }
+
+    .left-section {
+      width: 100%;
+      height: 1000px;
+      padding-top: 15px;
+      display: flex;
+      justify-content: center;
+      /* background-color: rgba(204, 163, 0, 0.5);
+      background-color: rgb(255, 255, 255);*/
+      background-color: rgba(203, 240, 193, 0.5)
+
+
+    }
+
+    .left-section-content {
+      width: 70%;
+      height: 900px;
+      /*background-color: red;*/
+      background-color: rgba(203, 240, 193, 0.5);
+      box-shadow:
+    }
+
+    @media (max-width:500px) {
+      .left-section-content{
+        width:100%;
+
+      }
+    }
+
+      .right-section {
+      width: 100%;
+      height: 800px;
+      background-color: rgb(248, 249, 250);
+
+    }
+
+    .right-section-content {
+      width: 100%;
+      height: 800px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(121, 82, 179, 0.2);
+
+    }
+
+    .search-container {
+      height: 100px;
+      width: 607px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+
+    .rev-container {
+      width: 100%;
+      height: 300px;
+      display: flex;
+      justify-content: space-between;
+      background-color: rgb(242, 242, 242);
+
+    }
+
+    .rev {
+      width: 200px;
+      height: 300px;
+    }
+
+    .title-container {
+      width: 250px;
+      height: 60px;
+      margin: 10px;
+    }
+
+    .president-container {
+      width: 100%;
+      height: 300px;
+      display: flex;
+      justify-content: space-between;
+      background-color: rgb(242, 242, 242);
+    }
+
+    hr {
+      border: 6px dotted rgba(0, 0, 128, 0.5);
+      border-bottom: none;
+      width: 5%;
+      margin: 10px auto;
+    }
+
+    .president {
+      width: 200px;
+      height: 300px;
+    }
+
+    .board-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 320px;
+      background-color: rgb(242, 242, 242);
+    }
+
+    .board {
+      width: 200px;
+      height: 300px;
+      border: 1px solid grey;
+
+    }
+
+    .board:hover {
+      width: 250px;
+      height: 310px;
+    }
+
+
+    .chaplaincy-title {
+      width: 300px;
+      height: 100px;
+      margin: 20px;
+      background-color: ;
+      border: 1px solid black;
+    }
+
+    .chaplaincy-content {
+      border: 1px solid black;
+      width: 80%;
+      height: 700px;
+      padding: 5px;
+      background-color: rgb(248, 249, 250);
+    }
+
+
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      background-color: coral;
+    }
+
+    .advert {
+      width: 200px;
+      height: 250px;
+      background-color: maroon;
+    }
+
+    @media (max-width:500px) {
+      .advert{
+        display: none;
+      }
+    }
+
+    @media (max-width:700px) {
+      .right{
+        display: none;
+      }
+    }
+
+
+    .privacy-policy {
+      width: 500px;
+      height: 250px;
+      float: left;
+      background-color: green;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    .head {
+      width: 200px;
+      height: 50px;
+    }
+
+    .links {
+      width: 200px;
+      height: 60px;
+    }
+
+    .foot {
+      width: 200px;
+      height: 50px;
+
+    }
+
+    .privacy-content {
+      width: 200px;
+      height: 200px;
+      display: block;
+      justify-content: center;
+
+    }
+
+    .icons {
+      margin: 3px;
+      width: 20px;
+      height: 20px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="top-bar-container">
+
+    <div class="word-container">
+      <span class="child one"> FECAMDS!!! </span>
+      <span class="child two"> In christ we heal the sick...</span>
+    </div>
+    <div class="logo-container">
+      <img class="logo" src="images/logo.jpg">
+    </div>
+  </div>
+
+  <div class="menu-bar-container">
+    <div class="menu">
+      <span class="menu-btns"><a href="#">Home</a></span>
+      <span class="menu-btns"><a href="contactform.html">Contact Us</a></span>
+      <span class="menu-btns"><a href="blog.html">Blog</a></span>
+      <span class="menu-btns">Gallery</span>
+    </div>
+
+  </div>
+
+  <div class="body container">
+
+    <div class="left-section">
+      <div class="left-section-content">
+
+        <div class="rev-container">
+
+          <div class="first image-container">
+            <img class="rev" src="images/Fr_clement.jpg" alt="">
+          </div>
+
+          <div class="first title-container">
+            <span>fr. Clement Okonkwo (current chaplain)</span>
+          </div>
+
+        </div>
+
+        <hr>
+        <div class="president-container">
+
+          <div class="second title-container">
+            <span>Ngwu Arinze Martins</span>
+          </div>
+
+          <div class="second image-container">
+            <img class="president" src="images/rick.jpg" alt="">
+          </div>
+
+        </div>
+        <hr>
+        <div class="board-container">
+          <div class="board one">
+
+          </div>
+
+          <div class="board two">
+
+          </div>
+
+          <div class="board three">
+
+          </div>
+        </div>
+
+        <hr>
+        <!--
+	        <span class="our-mission">Our Mission</span>
+	        <p>dwuvwd9vuwv9 obvw w gq=vw0vhj  g fgpi ppgdugvcwuvqwcudwqcvuwoqiuqvcqowuvcuqwcvicvwuqvucvwugdcuv</p>
+-->
+      </div>
+
+    </div>
+    <div class="right-section">
+      <!--
+	      <div class="search-container">
+
+	        <input type="text" id="search" placeholder="search" name="" value="">
+
+	      </div>
+-->
+      <div class="right-section-content">
+
+        <div class="chaplaincy-content one">
+          <div class="chaplaincy-title first">
+            <h1> St. Rita's Chaplaincy </h1>
+            <img src=""></img>
+          </div>
+
+          <div class=" content-body">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent non nisi et tellus pretium viverra. Donec eleifend mi eu mi pharetra, non sollicitudin dolor suscipit. Phasellus orci nisl, tristique nec tortor eu, lobortis convallis
+            orci. Donec tortor leo, sollicitudin quis elit a, ultricies scelerisque leo. Aenean ac scelerisque ante. Quisque tincidunt tristique consequat. Fusce pulvinar feugiat tristique. Vestibulum finibus vitae ipsum at tincidunt. Mauris
+            ullamcorper porttitor leo et semper. Aliquam id ex varius, vulputate lorem ac, ullamcorper nisl. Praesent quis faucibus odio. Suspendisse luctus enim erat, ut ultrices felis tempor ut. Ut iaculis sem id augue tempor tincidunt. Maecenas
+            tincidunt tortor ac elementum gravida. Phasellus pellentesque velit ut urna tempor consectetur. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+ 	<div class="footer">
+
+      	<div class="footer-content">
+	        <div class="left advert">
+	          <h1>ADVERTS!!!</h1>
+	        </div>
+
+	        <div class="privacy-policy">
+
+				<div class="privacy-content">
+
+		            <div class="head">
+		              <h3>Created by Chuddy_Jay</h3>
+		            </div>
+
+		            <div class="links">
+
+		              <nav>
+		                <a href="#">insta</a> |
+		                <a href="#">Fb</a> |
+		                <a href="#">Twitter</a> |
+		                <a href="#">Gmail</a> |
+		              </nav>
+
+		              <img class="icons" src="icons/insta-icon.svg" alt="insta icon">
+		              <img class="icons" src="icons/facebook-icon.svg" alt="fb icon">
+		              <img class="icons" src="icons/twitter-icon.svg" alt="twitter icon">
+		              <img class="icons" src="icons/gmail-icon.svg" alt="gmail icon">
+		            </div>
+
+		            <div class="foot">
+		              <h3>Copyright @Chuddy_Jay.com </h3>
+		            </div>
+
+				</div>
+
+        	</div>
+
+	        <div class="right advert">
+	          <h1>ADVERTS!!!</h1>
+	        </div>
+
+      	</div>
+
+    </div>
+    <script type="text/javascript">
+
+
+    </script>
+</body>
+
+</html>
